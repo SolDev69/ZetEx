@@ -56,9 +56,9 @@ public class ZetEX implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		if (!(Objects.equals(getModVersion(), "development-version") || !(Objects.equals(getModVersion(), null))))
-		{ setModVersion(); } else {
-			MOD_VERSION = getModVersion();
+		if (getModVersion().contains("dev"))
+		{ MOD_VERSION = getModVersion(); } else {
+			setModVersion();
 		}
 		ZFVersionString = "ZetEX " + ZetEX.MOD_VERSION;
 		LOGGER.info("Hello Fabric world!");
