@@ -1,4 +1,4 @@
-package org.infotoast.cursedcreations.zeta.zetex.mixin.client;
+package org.infotoast.cursedcreations.zeta.zetex.api.mixin.client;
 
 import me.zeroeightsix.fiber.exception.FiberException;
 import net.fabricmc.api.EnvType;
@@ -10,7 +10,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.MathHelper;
-import org.infotoast.cursedcreations.zeta.zetex.managers.ConfigManager;
+import org.infotoast.cursedcreations.zeta.zetex.api.managers.ConfigManager;
 import org.infotoast.cursedcreations.zeta.zetex.api.messagewritingapi.MessageDrawingAPI;
 import org.infotoast.cursedcreations.zeta.zetex.ZetEX;
 import org.spongepowered.asm.mixin.Mixin;
@@ -58,20 +58,20 @@ public class MixinTitleScreen extends Screen {
         float f = this.doBackgroundFade ? (float)(Util.getMeasuringTimeMs() - this.backgroundFadeStart) / 1000.0f : 1.0f;
         float g = this.doBackgroundFade ? MathHelper.clamp(f - 1.0f, 0.0f, 1.0f) : 1.0f;
         int l = MathHelper.ceil(g * 255.0f) << 24;
-        if((Date.from(Instant.now()).getDate() == 16 && Date.from(Instant.now()).getMonth() == Calendar.MARCH)
+        if((Date.from(Instant.now()).getDate() == 4 && Date.from(Instant.now()).getMonth() == Calendar.MAY)
                 // For testing purposes
                 //|| Boolean.TRUE.equals(ConfigManager.getConfig().isDevVersion.getValue())
         )
-            drawStringWithShadow(matrices, this.textRenderer, "HAPPY BIRTHDAY ZETAFORGED!", 2, 2, 0xffff00 | l);
-        /* TODO: move this to the API later */ drawStringWithShadow(matrices, this.textRenderer, "Mods Loaded: " + (FabricLoader.getInstance().getAllMods().toArray().length-54), 2, this.height - 30, 16777215|l);
-        if(System.getProperty("java.version").startsWith("16") || System.getProperty("java.version").startsWith("17")) {
+            drawStringWithShadow(matrices, this.textRenderer, "HAPPY BIRTHDAY ZETEX! YOU HAVE THE BLESSING OF THE FORCE!", 2, 2, 0xffff00 | l);
+        /* TODO: move this to the API later */ drawStringWithShadow(matrices, this.textRenderer, "Mods Loaded: " + (FabricLoader.getInstance().getAllMods().toArray().length-38), 2, this.height - 30, 16777215|l);
+        if(System.getProperty("java.version").startsWith("17")) {
             drawStringWithShadow(matrices, this.textRenderer, "Running on java version " + System.getProperty("java.version"), 2, this.height - 40, 16777215|l);
         } else {
             drawStringWithShadow(matrices, this.textRenderer, "Running on java version " + System.getProperty("java.version"), 2, this.height - 50, 16777215|l);
             drawStringWithShadow(matrices, this.textRenderer, "WARNING! It is recommended you play on java 17 for maximum stability", 2, this.height - 40, 16777215|l);
         }
         if(ZetEX.isDevVersion()) {
-            drawStringWithShadow(matrices, this.textRenderer, ZetEX.ZFVersionString + "/dev", 2, this.height - 20, 16777215 | l);
+            drawStringWithShadow(matrices, this.textRenderer, ZetEX.ZFVersionString + "/dev", 2, this.height - 60, 16777215 | l);
         } else {
             drawStringWithShadow(matrices, this.textRenderer, ZetEX.ZFVersionString , 2, this.height - 20, 16777215 | l);
         }

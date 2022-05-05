@@ -1,7 +1,7 @@
 package org.infotoast.cursedcreations.zeta.zetex.mixin;
 
 import net.minecraft.util.math.noise.OctavePerlinNoiseSampler;
-import org.infotoast.cursedcreations.zeta.zetex.managers.GeneralManager;
+import org.infotoast.cursedcreations.zeta.zetex.api.managers.GeneralManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 

@@ -1,4 +1,4 @@
-package org.infotoast.cursedcreations.zeta.zetex.mixin.accessors;
+package org.infotoast.cursedcreations.zeta.zetex.api.mixin.accessors;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

@@ -1,6 +1,6 @@
 package org.infotoast.cursedcreations.zeta.zetex.api.messagewritingapi;
 
-import org.infotoast.cursedcreations.zeta.zetex.managers.ConfigManager;
+import org.infotoast.cursedcreations.zeta.zetex.api.managers.ConfigManager;
 
 public class MessageDrawingAPI {
     static ConfigManager config = ConfigManager.getConfig();

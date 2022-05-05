@@ -1,8 +1,7 @@
-package org.infotoast.cursedcreations.zeta.zetex.managers;
+package org.infotoast.cursedcreations.zeta.zetex.api.managers;
 import me.zeroeightsix.fiber.exception.FiberException;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.math.MathHelper;
-import org.apache.logging.log4j.Level;
 import org.infotoast.cursedcreations.zeta.zetex.ZetEX;
 
 public class GeneralManager implements ModInitializer {

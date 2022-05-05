@@ -4,8 +4,7 @@ import me.zeroeightsix.fiber.exception.FiberException;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.SharedConstants;
-import org.apache.commons.logging.Log;
-import org.infotoast.cursedcreations.zeta.zetex.managers.ConfigManager;
+import org.infotoast.cursedcreations.zeta.zetex.api.managers.ConfigManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -57,7 +56,7 @@ public class ZetEX implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		if (!(Objects.equals(getModVersion(), "development-version")))
+		if (!(Objects.equals(getModVersion(), "development-version") || !(Objects.equals(getModVersion(), null))))
 		{ setModVersion(); } else {
 			MOD_VERSION = getModVersion();
 		}

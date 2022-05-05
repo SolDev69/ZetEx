@@ -1,6 +1,5 @@
-package org.infotoast.cursedcreations.zeta.zetex.managers;
+package org.infotoast.cursedcreations.zeta.zetex.api.managers;
 
-import blue.endless.jankson.JsonPrimitive;
 import me.zeroeightsix.fiber.JanksonSettings;
 import me.zeroeightsix.fiber.exception.FiberException;
 import me.zeroeightsix.fiber.tree.ConfigNode;
@@ -14,7 +13,7 @@ import org.infotoast.cursedcreations.zeta.zetex.ZetEX;
 import java.io.*;
 import java.nio.file.Files;
 
-import static org.infotoast.cursedcreations.zeta.zetex.managers.GeneralManager.FarLandsManager.farlandsDefaultValue;
+import static org.infotoast.cursedcreations.zeta.zetex.api.managers.GeneralManager.FarLandsManager.farlandsDefaultValue;
 
 public class ConfigManager  {
     /*

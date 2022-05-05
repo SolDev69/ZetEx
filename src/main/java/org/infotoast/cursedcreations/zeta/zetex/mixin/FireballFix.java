@@ -6,7 +6,7 @@ import net.minecraft.entity.projectile.AbstractFireballEntity;
 import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.World;
-import org.infotoast.cursedcreations.zeta.zetex.managers.ConfigManager;
+import org.infotoast.cursedcreations.zeta.zetex.api.managers.ConfigManager;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;

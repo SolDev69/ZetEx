@@ -22,7 +22,8 @@
     ]
   },
   "mixins": [
-    "zetex.mixins.json"
+    "zetex.mixins.json",
+    "zetex.api.mixins.json"
   ],
 
   "depends": {

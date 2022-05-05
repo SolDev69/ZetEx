@@ -7,14 +7,12 @@
     "FarLandsMixins",
     "FireballFix",
     "SpawnEggFixMixin",
-    "accessors.PerlinNoiseSamplerAccessor",
-    "accessors.TextRendererAccessor",
     "accessors.WorldBorderCommandAccessor"
   ],
   "client": [
-    "client.MixinTitleScreen"
   ],
   "injectors": {
     "defaultRequire": 1
   }
 }
+

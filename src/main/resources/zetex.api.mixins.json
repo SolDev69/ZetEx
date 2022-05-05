@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.infotoast.cursedcreations.zeta.zetex.api.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "accessors.TextRendererAccessor"
+  ],
+  "client": [
+    "client.MixinTitleScreen"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
