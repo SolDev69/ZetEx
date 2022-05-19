@@ -17,20 +17,9 @@ import static org.infotoast.cursedcreations.zeta.zetex.api.MathHelper.randInt;
 public class MixinFrogEntity {
     @Overwrite
     public static boolean isValidFrogFood(LivingEntity entity) {
-        if (entity instanceof SlimeEntity slimeEntity) {
-            if (slimeEntity.getSize() != 1) {
-                return false;
-            }
-        }
-
-        if (entity instanceof GoatEntity goatEntity) {
-            return true;
-        }
-        if (entity instanceof PlayerEntity playerEntity) {
-            return true;
-        }
-
-        return entity.getType().isIn(EntityTypeTags.FROG_FOOD);
+        // Frog food is now yes
+        // TODO: Note, undo if lag. Make configurable.
+        return true;
     }
 
 
