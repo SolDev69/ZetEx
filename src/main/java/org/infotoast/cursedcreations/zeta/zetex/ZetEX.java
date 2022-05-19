@@ -4,6 +4,8 @@ import me.zeroeightsix.fiber.exception.FiberException;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.SharedConstants;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import org.infotoast.cursedcreations.zeta.zetex.api.managers.ConfigManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -18,7 +18,8 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "org.infotoast.cursedcreations.zeta.zetex.ZetEX"
+      "org.infotoast.cursedcreations.zeta.zetex.ZetEX",
+      "org.infotoast.cursedcreations.zeta.zetex.features.OreInitializer"
     ]
   },
   "mixins": [

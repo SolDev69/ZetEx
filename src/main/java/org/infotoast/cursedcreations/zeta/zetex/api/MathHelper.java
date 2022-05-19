@@ -11,4 +11,8 @@ public final class MathHelper {
     public static long floorDiv(double in1, double in2) {
         return (long) Math.floor(in1 / in2);
     }
+
+    public static int randInt(int min, int max) {
+        return (int) Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+    }
 }
