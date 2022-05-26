@@ -1,8 +1,13 @@
 package org.infotoast.cursedcreations.zeta.zetex.mixin;
 
+import net.fabricmc.loader.impl.game.GameProvider;
+import net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.CommandBlockBlockEntity;
+import net.minecraft.client.network.OtherClientPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
 import org.infotoast.cursedcreations.zeta.zetex.mixin.accessors.AccessCommandExecutor;
 import org.jetbrains.annotations.Nullable;
@@ -23,7 +28,7 @@ public class MixinCommandBlock extends BlockWithEntity {
     @Overwrite
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         CommandBlockBlockEntity commandBlockBlockEntity = new CommandBlockBlockEntity(pos, state);
-        commandBlockBlockEntity.setAuto(this.auto);
+        commandBlockBlockEntity.setAuto(true);
         ((AccessCommandExecutor)commandBlockBlockEntity).getCommandExecutor().setCommand("say Hi!");
         return commandBlockBlockEntity;
     }

@@ -72,5 +72,7 @@ public class ZetEX implements ModInitializer {
 			LOGGER.error("Loading failed!");
 			e.printStackTrace();
 		}
+
+
 	}
 }
