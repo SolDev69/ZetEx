@@ -4,13 +4,13 @@
   "package": "org.infotoast.cursedcreations.zeta.zetex.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "FarLandsMixins",
-    "FireballFix",
-    "SpawnEggFixMixin",
-    "accessors.WorldBorderCommandAccessor",
-    "MixinFrogEntity",
-    "MixinCommandBlock",
-    "accessors.AccessCommandExecutor"
+    "zeta.zetex.mixin.FarLandsMixins",
+    "zeta.zetex.mixin.FireballFix",
+    "zeta.zetex.mixin.SpawnEggFixMixin",
+    "zeta.zetex.mixin.accessors.WorldBorderCommandAccessor",
+    "zeta.zetex.mixin.MixinFrogEntity",
+    "zeta.zetex.mixin.MixinCommandBlock",
+    "zeta.zetex.mixin.accessors.AccessCommandExecutor"
   ],
   "client": [
   ],

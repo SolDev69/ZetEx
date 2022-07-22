@@ -4,10 +4,10 @@
   "package": "org.infotoast.cursedcreations.zeta.zetex.api.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "accessors.TextRendererAccessor"
+    "zeta.zetex.api.mixin.accessors.TextRendererAccessor"
   ],
   "client": [
-    "client.MixinTitleScreen"
+    "zeta.zetex.api.mixin.client.MixinTitleScreen"
   ],
   "injectors": {
     "defaultRequire": 1
