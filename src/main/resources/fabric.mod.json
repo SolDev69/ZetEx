@@ -18,8 +18,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "zeta.zetex.ZetEX",
-      "zeta.zetex.features.OreInitializer"
+      "zeta.zetex.ZetEX"
     ]
   },
   "mixins": [

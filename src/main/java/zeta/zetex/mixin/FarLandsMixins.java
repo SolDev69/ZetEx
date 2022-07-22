@@ -14,7 +14,6 @@ public class FarLandsMixins {
 	@Overwrite
 	public static double maintainPrecision(double d) {
 
-		return GeneralManager.FarLandsManager.
-				maintainPrecisionManageable(d);
+		return GeneralManager.FarLandsManager.maintainPrecisionManageable(d);
 	}
 }

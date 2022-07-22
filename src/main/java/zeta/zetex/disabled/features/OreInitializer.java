@@ -1,4 +1,4 @@
-package zeta.zetex.features;
+package zeta.zetex.disabled.features;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -20,7 +20,9 @@ import java.util.Arrays;
 
 import static zeta.zetex.ZetEX.MOD_ID;
 
-public class OreInitializer implements ModInitializer {
+public class OreInitializer
+        //implements ModInitializer
+        {
     private static ConfiguredFeature<?, ?> OVERWORLD_WOOL_ORE_CONFIGURED_FEATURE = new ConfiguredFeature
             (Feature.ORE, new OreFeatureConfig(
                     OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
@@ -35,7 +37,7 @@ public class OreInitializer implements ModInitializer {
                     HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(64))
             )); // height
 
-    @Override
+    //@Override
     public void onInitialize() {
         System.out.println("ORES INIT");
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE,
