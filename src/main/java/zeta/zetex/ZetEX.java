@@ -7,6 +7,8 @@ import net.minecraft.SharedConstants;
 import zeta.zetex.api.managers.ConfigManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import zeta.zetex.api.registry.Registry;
+import zeta.zetex.registry.ItemAndBlockRegistry;
 
 public class ZetEX implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -68,7 +70,6 @@ public class ZetEX implements ModInitializer {
 			LOGGER.error("Loading failed!");
 			e.printStackTrace();
 		}
-
-
+		ItemAndBlockRegistry.register();
 	}
 }
