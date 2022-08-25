@@ -70,6 +70,9 @@ public class ZetEX implements ModInitializer {
 			LOGGER.error("Loading failed!");
 			e.printStackTrace();
 		}
+		// Register items
 		ItemAndBlockRegistry.register();
+		System.out.println(ItemAndBlockRegistry.TOKEN);
+		System.out.println(ItemAndBlockRegistry.isRegistered(ItemAndBlockRegistry.TOKEN));
 	}
 }

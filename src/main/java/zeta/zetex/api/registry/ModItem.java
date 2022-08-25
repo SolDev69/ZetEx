@@ -17,4 +17,7 @@ public class ModItem extends zeta.zetex.api.registry.Registry {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, id), this.item);
     }
 
+    public Item asItem() {
+        return item;
+    }
 }
