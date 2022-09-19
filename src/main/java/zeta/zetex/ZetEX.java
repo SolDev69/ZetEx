@@ -8,6 +8,7 @@ import zeta.zetex.api.managers.ConfigManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import zeta.zetex.api.registry.Registry;
+import zeta.zetex.register.ItemAndBlockRegistry;
 
 public class ZetEX implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -67,6 +68,7 @@ public class ZetEX implements ModInitializer {
 
 		LOGGER.error("This is an alpha version of " + MOD_NAME + "! Major issues may arise!");
 		// Todo: Add RegistryInitializer class similar to ModInitializer and make alpha version warning toggleable per mod.
+		/* Test this */ ItemAndBlockRegistry.register();
 		try {
 			ConfigManager.initialize();
 		} catch (FiberException e) {
