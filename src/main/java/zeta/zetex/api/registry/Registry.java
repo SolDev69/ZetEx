@@ -8,7 +8,7 @@ public abstract class Registry {
     public static final HashMap<ModBlock, String> REGISTERED_BLOCKS = new HashMap<>();
     public static final HashMap<ModItem, String> REGISTERED_ITEMS = new HashMap<>();
     Registry(String id) {
-        this.ID = id;
+        this.ID = id.toUpperCase();
         REGISTERED.put(this, ID);
         if (this instanceof ModBlock) REGISTERED_BLOCKS.put((ModBlock) this, ID);
         if (this instanceof ModItem) REGISTERED_ITEMS.put((ModItem) this, ID);
