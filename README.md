@@ -1,7 +1,3 @@
-# ZetEX
-A group of mods and coremods that expand and enhance on the base game.
-## EARLY ALPHA BUILDS AHEAD!
-### Latest WIP Update: [1.19] ZetEX
+# ZetEXLib
 
-# Requirements
-### Fabric API
+A library mod for feature enhancements indev and in production.
