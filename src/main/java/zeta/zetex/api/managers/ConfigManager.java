@@ -90,26 +90,6 @@ public class ConfigManager  {
             .withDefaultValue(true)
             .withParent(gameplay)
             .build();
-    public ConfigValue<Boolean> farLandsEnabled = ConfigValue.builder(Boolean.class)
-            .withName("farLandsEnabled")
-            .withComment("Whether or not the " +
-                    "Far Lands should generate.")
-            .withDefaultValue(farlandsDefaultValue())
-            .withParent(general)
-            .build();
-    public ConfigValue<Boolean> shardFarLands = ConfigValue.builder(Boolean.class)
-            .withName("shardFarLands")
-            .withComment("Should the shard farlands spawn?")
-            .withDefaultValue(false)
-            .withParent(general)
-            .build();
-    private Node hashNode = root.fork("Hash Key");
-    public ConfigValue<String> hash = ConfigValue.builder(String.class)
-            .withName("hash")
-            .withComment("private hash given out to testers")
-            .withDefaultValue("")
-            .withParent(hashNode)
-            .build();
     public ConfigValue<Double> coordinateScale = ConfigValue.builder(Double.class)
             .withName("coordinateScale")
             .withComment("The world's coordinate scale.")

@@ -6,8 +6,7 @@
   "mixins": [
     "FarLandsMixins",
     "FireballFix",
-    "SpawnEggFixMixin",
-    "MixinFrogEntity"
+    "SpawnEggFixMixin"
   ],
   "client": [
   ],
