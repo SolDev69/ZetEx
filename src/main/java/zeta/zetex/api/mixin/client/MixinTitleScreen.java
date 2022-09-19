@@ -63,7 +63,8 @@ public class MixinTitleScreen extends Screen {
                 //|| Boolean.TRUE.equals(ConfigManager.getConfig().isDevVersion.getValue())
         )
             drawStringWithShadow(matrices, this.textRenderer, "HAPPY BIRTHDAY ZETEX! YOU HAVE THE BLESSING OF THE FORCE!", 2, 2, 0xffff00 | l);
-        /* TODO: move this to the API later */ drawStringWithShadow(matrices, this.textRenderer, "Mods Loaded: " + (FabricLoader.getInstance().getAllMods().toArray().length-40), 2, this.height - 30, 16777215|l);
+        drawStringWithShadow(matrices, this.textRenderer, "Mods Loaded: " + (FabricLoader.getInstance().getAllMods().toArray().length-40), 2, this.height - 30, 16777215|l);
+        drawStringWithShadow(matrices, this.textRenderer, "WARNING! API IN ALPHA! PLEASE VERIFY ISSUES BEFORE REPORTING!", 2, 2, 0xFF0000);
         if(System.getProperty("java.version").startsWith("17")) {
             drawStringWithShadow(matrices, this.textRenderer, "Running on java version " + System.getProperty("java.version"), 2, this.height - 40, 16777215|l);
         } else {

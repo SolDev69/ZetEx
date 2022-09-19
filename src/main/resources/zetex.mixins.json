@@ -7,10 +7,7 @@
     "FarLandsMixins",
     "FireballFix",
     "SpawnEggFixMixin",
-    "accessors.WorldBorderCommandAccessor",
-    "MixinFrogEntity",
-    "MixinCommandBlock",
-    "accessors.AccessCommandExecutor"
+    "MixinFrogEntity"
   ],
   "client": [
   ],

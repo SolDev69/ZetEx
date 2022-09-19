@@ -8,14 +8,13 @@ import zeta.zetex.api.managers.ConfigManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import zeta.zetex.api.registry.Registry;
-import zeta.zetex.registry.ItemAndBlockRegistry;
 
 public class ZetEX implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final String MOD_ID = "zetex";
-	public static final String MOD_NAME = "ZetEX";
+	public static final String MOD_NAME = "ZetEXLib";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
 	public static String MOD_VERSION;
 
@@ -36,9 +35,10 @@ public class ZetEX implements ModInitializer {
 		else {
 			MOD_VERSION = modVersionImpl;
 		}
+
 		if (getModVersion().endsWith("-")) MOD_VERSION = MOD_VERSION.split("-")[0];
 		// TODO : Autodetect mod version is in format 1.x and display update name accordingly ("Enum constant ordinal")
-		if (modVersionImpl.equals("1.1") || modVersionImpl.equals("v1.1.0")) MOD_VERSION += " - The Fringe Lands Update";
+		//if (modVersionImpl.equals("1.1") || modVersionImpl.equals("v1.1.0")) MOD_VERSION += " - The Fringe Lands Update";
 	}
 
 
@@ -60,19 +60,18 @@ public class ZetEX implements ModInitializer {
 		{ MOD_VERSION = getModVersion(); } else {
 			setModVersion();
 		}
-		ZFVersionString = "ZetEX " + ZetEX.MOD_VERSION;
+		ZFVersionString = MOD_NAME + " " + ZetEX.MOD_VERSION;
 		LOGGER.info("Hello Fabric world!");
 		LOGGER.info("Initializing config");
 		LOGGER.info("Loading on minecraft version " + SharedConstants.getGameVersion().getName());
+
+		LOGGER.error("This is an alpha version of " + MOD_NAME + "! Major issues may arise!");
+		// Todo: Add RegistryInitializer class similar to ModInitializer and make alpha version warning toggleable per mod.
 		try {
 			ConfigManager.initialize();
 		} catch (FiberException e) {
 			LOGGER.error("Loading failed!");
 			e.printStackTrace();
 		}
-		// Register items
-		ItemAndBlockRegistry.register();
-		System.out.println(ItemAndBlockRegistry.TOKEN);
-		System.out.println(ItemAndBlockRegistry.isRegistered(ItemAndBlockRegistry.TOKEN));
 	}
 }

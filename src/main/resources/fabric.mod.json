@@ -18,7 +18,8 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "zeta.zetex.ZetEX"
+      "zeta.zetex.ZetEX",
+      "zeta.zetex.api.ZetEXAPI"
     ]
   },
   "mixins": [
