@@ -78,7 +78,7 @@ publishing {
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
-		vendor = JvmVendorSpec.MICROSOFT
+		languageVersion = JavaLanguageVersion.of(18)
+		vendor = JvmVendorSpec.ADOPTIUM
 	}
 }
