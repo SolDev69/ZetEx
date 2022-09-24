@@ -75,10 +75,3 @@ publishing {
 		// retrieving dependencies.
 	}
 }
-
-java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(18)
-		vendor = JvmVendorSpec.ADOPTIUM
-	}
-}
