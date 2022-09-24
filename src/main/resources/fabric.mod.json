@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "zetex",
+  "id": "zxapi",
   "version": "${version}",
 
-  "name": "ZetEX",
-  "description": "A group of mods and coremods that expand and enhance on the base game.",
+  "name": "ZXAPI",
+  "description": "",
   "authors": [
   ],
   "contact": {

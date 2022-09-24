@@ -13,7 +13,6 @@ import zeta.zetex.ZetEX;
 import java.io.*;
 import java.nio.file.Files;
 
-import static zeta.zetex.api.managers.GeneralManager.FarLandsManager.farlandsDefaultValue;
 
 public class ConfigManager  {
     /*
@@ -70,14 +69,9 @@ public class ConfigManager  {
             .withDefaultValue(ZetEX.getModVersion().contains("-") || FabricLoader.getInstance().isDevelopmentEnvironment())
             .withParent(general)
             .build();
-    public ConfigValue<Integer> superFireballStrength = ConfigValue.builder(Integer.class)
-            .withName("superFireballStrength")
-            .withDefaultValue(100)
-            .withParent(gameplay)
-            .build();
     public ConfigValue<Integer> fireballCap = ConfigValue.builder(Integer.class)
             .withName("fireballCap")
-            .withComment("Maximum strength a fireball can be set. Currently useless. Will override fixFireballs.")
+            .withComment("Maximum strength a fireball can be set.")
             .withDefaultValue(100)
             .withParent(gameplay)
             .build();
@@ -89,63 +83,6 @@ public class ConfigManager  {
                     "and makes bedrock farms work again")
             .withDefaultValue(true)
             .withParent(gameplay)
-            .build();
-    public ConfigValue<Double> coordinateScale = ConfigValue.builder(Double.class)
-            .withName("coordinateScale")
-            .withComment("The world's coordinate scale.")
-            .withDefaultValue(684.412D)
-            .withParent(world)
-            .build();
-    public ConfigValue<Double> individualCoordinateScaleMultiplierX = ConfigValue.builder(Double.class)
-            .withName("individualCoordinateScaleMultiplierX")
-            //.withComment("World's coordinate scale on the X axis")
-            .withDefaultValue(1.0d)
-            .withParent(world)
-            .build();
-    public ConfigValue<Double> individualCoordinateScaleMultiplierZ = ConfigValue.builder(Double.class)
-            .withName("individualCoordinateScaleMultiplierZ")
-            //.withComment("World's coordinate scale on the Z axis")
-            .withDefaultValue(1.0d)
-            .withParent(world)
-            .build();
-    public ConfigValue<Double> individualMainScaleMultiplierX = ConfigValue.builder(Double.class)
-            .withName("individualMainScaleMultiplierX")
-            .withDefaultValue(individualCoordinateScaleMultiplierX.getDefaultValue())
-            .withParent(world)
-            .build();
-    public ConfigValue<Double> heightScaleMultiplier = ConfigValue.builder(Double.class)
-            .withName("heightScaleMulti")
-            .withComment("Height scale multiplyer" +
-                    " so you don't have to mess with the one " +
-                    "above.")
-            .withDefaultValue(1.0D)
-            .withParent(world)
-            .build();
-    public ConfigValue<Double> individualMainScaleMultiplierY = ConfigValue.builder(Double.class)
-            .withName("individualMainScaleMultiplierY")
-            .withDefaultValue(heightScaleMultiplier.getDefaultValue())
-            .withParent(world)
-            .build();
-    public ConfigValue<Double> individualMainScaleMultiplierZ = ConfigValue.builder(Double.class)
-            .withName("individualMainScaleMultiplierZ")
-            .withDefaultValue(individualCoordinateScaleMultiplierZ.getDefaultValue())
-            .withParent(world)
-            .build();
-    @Deprecated
-    public ConfigValue<Double> coordinateScaleMultiplier = ConfigValue.builder(Double.class)
-            .withName("coordinateScaleMulti")
-            .withComment("Coordinate scale " +
-                    "multiplyer so you don't have to mess with" +
-                    " the one above. (Currently unused)")
-            .withDefaultValue(1.0D)
-            .withParent(world)
-            .build();
-
-    public ConfigValue<Boolean> worldborderExpansion = ConfigValue.builder(Boolean.class)
-            .withName("expandWorldBorder")
-            .withComment("Will be the config value to expand worldborder in a later version")
-            .withDefaultValue(true)
-            .withParent(world)
             .build();
     public static ConfigManager getConfig() {
         return GeneralManager.CONFIG;

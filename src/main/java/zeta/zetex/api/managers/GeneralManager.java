@@ -26,29 +26,4 @@ public class GeneralManager implements ModInitializer {
     @Override
     public void onInitialize() {}
 
-    public static class FarLandsManager {
-        public static boolean farlandsDefaultValue() {
-            return false;
-        }
-
-        // This is now mixinable!
-        public static boolean farlands() {
-            return
-                    getConfig().farLandsEnabled.getValue();
-        }
-        public static Boolean FARLANDS_INTIALIZED = false;
-        public static final double maintainPrecisionManageable(double d) {
-            if(farlands()) {
-                if (!FARLANDS_INTIALIZED) {
-                    FARLANDS_INTIALIZED = !FARLANDS_INTIALIZED;
-                    ZetEX.LOGGER.info("FarLands intialized!");
-                }
-                return d;
-            }
-            else {
-                return d - (double) MathHelper.lfloor(d / 3.3554432E7D + 0.5D) * 3.3554432E7D;
-            }
-        }
-    }
-
 }

@@ -6,6 +6,7 @@ import zeta.zetex.api.registry.Registry;
 import zeta.zetex.api.util.NotStaticException;
 
 public class ItemAndBlockRegistry {
+
     
     public ItemAndBlockRegistry() throws NotStaticException {
         throw new NotStaticException("No constructor needed!");
