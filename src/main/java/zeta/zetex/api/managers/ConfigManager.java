@@ -6,12 +6,17 @@ import me.zeroeightsix.fiber.tree.ConfigNode;
 import me.zeroeightsix.fiber.tree.ConfigValue;
 import me.zeroeightsix.fiber.tree.Node;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.entity.mob.SlimeEntity;
+import net.minecraft.tag.EntityTypeTags;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.checkerframework.checker.units.qual.A;
 import zeta.zetex.ZetEX;
 
 import java.io.*;
 import java.nio.file.Files;
+import java.security.PrivilegedAction;
+import java.util.ArrayList;
 
 
 public class ConfigManager  {
@@ -84,6 +89,17 @@ public class ConfigManager  {
             .withDefaultValue(true)
             .withParent(gameplay)
             .build();
+    ArrayList<String> vFFd = new ArrayList<>();
+    {
+        vFFd.add("Goat");
+    }
+    public ConfigValue<ArrayList> validFrogFood = ConfigValue.builder(ArrayList.class)
+            .withName("Valid Frog Food")
+            .withComment("List of entities that are considered valid frog food")
+            .withDefaultValue(vFFd)
+            .withParent(gameplay)
+            .build();
+
     public static ConfigManager getConfig() {
         return GeneralManager.CONFIG;
     }
